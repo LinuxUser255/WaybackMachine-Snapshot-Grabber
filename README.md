@@ -1,6 +1,8 @@
 # Wayback Machine Scraper Bot
 
-A Python bot to scrape all available snapshots of a website from the Internet Archive's Wayback Machine.
+A Python bot that will scrape and DOWNLOAD ALL AVAILABLE SNAPSHOTS of a website from the Internet Archive's Wayback Machine.
+
+<br>
 
 ## Features
 
@@ -12,11 +14,15 @@ A Python bot to scrape all available snapshots of a website from the Internet Ar
 - Filters for successful captures (200 status code)
 - Collapses to one snapshot per day to avoid duplicates
 
+<br>
+
 ## Installation
 
 ```bash
 pip install -r requirements.txt
 ```
+
+<br>
 
 ## Usage
 
@@ -59,16 +65,20 @@ The bot creates:
 - A `metadata.json` file with information about all snapshots
 - Filenames formatted as: `YYYY-MM-DD_HH-MM-SS.html`
 
-## Example
+## Example: python.org
 
 ```bash
 python wayback_scraper.py https://python.org -l 20
 ```
 
+<br>
+
 This will:
 1. Fetch up to 20 snapshots of python.org
 2. Save them to the `snapshots/` directory
 3. Create a `metadata.json` file with snapshot details
+
+<br>
 
 ## Notes
 
@@ -76,3 +86,5 @@ This will:
 - The default 1-second delay between requests is recommended
 - Snapshots are collapsed to one per day to avoid duplicates
 - Only successful captures (HTTP 200) are downloaded
+
+<br>
